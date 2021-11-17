@@ -52,7 +52,11 @@ $(window).bind("load", function() {
 		jstack.shuffle();
 	});
 
-    
+	lightbox.option({
+		wrapAround: true,
+		albumLabel: "%1/%2"
+	})
+
 });
 
 

@@ -3,3 +3,18 @@
     height: 200px;
     border: 2px solid;
 }
+
+#jstack-images-ctnr img {
+    height: 200px;
+}
+
+#lightbox-gallery-ctnr {
+    margin-top: 240px;
+}
+
+#lightbox-gallery-ctnr img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
