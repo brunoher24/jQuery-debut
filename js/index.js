@@ -22,6 +22,9 @@
 
 // });
 
+const MOVIE_API_URL 	= `https://api.themoviedb.org/3/tv/popular?api_key=${MOVIE_API_KEY}&language=fr&page=`;
+// const urlImgPrefix 		= 'https://image.tmdb.org/t/p/w500';
+console.log(MOVIE_API_URL);
 const options = {
 	isClickAnimation: true,
 	isPositionRandom: true,
@@ -55,10 +58,13 @@ $(window).bind("load", function() {
 	lightbox.option({
 		wrapAround: true,
 		albumLabel: "%1/%2"
-	})
+	});
+
+	$("#slick-section").slick({
+		lazyLoad: 'ondemand',
+	});
 
 });
-
 
 
 

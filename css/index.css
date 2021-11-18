@@ -1,3 +1,12 @@
+body {
+    background-color: silver;
+}
+
+img {
+    object-fit: cover;
+    object-position: center;
+}
+
 .colored-square {
     width: 200px;
     height: 200px;
@@ -15,6 +24,13 @@
 #lightbox-gallery-ctnr img {
     width: 200px;
     height: 200px;
-    object-fit: cover;
-    object-position: center;
+}
+
+#slick-section {
+    margin: 30px auto;
+    width: 80%;
+}
+
+#slick-section img {
+    height: 300px;
 }
