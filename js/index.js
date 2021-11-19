@@ -1,30 +1,6 @@
-// $(window).on("load", function() {
-    
+const MOVIE_API_URL 	= `https://api.themoviedb.org/3/tv/popular?api_key=${MOVIE_API_KEY}&language=fr&page=1`;
+const urlImgPrefix 		= 'https://image.tmdb.org/t/p/w500';
 
-    // function randomIntFromInterval(min, max) { // min and max included 
-    //     return Math.floor(Math.random() * (max - min + 1) + min);
-    // }
-    
-    // $switchColorBtn = $("#switch-color-btn");
-    // const $coloredSquare = $("div.colored-square");
-    // console.log($coloredSquare)
-    
-    
-    // function getRandomColor() {
-    //     const colors = ["red", "yellow", "green", "blue"];
-    //     return colors[randomIntFromInterval(0, colors.length-1)];
-    // }
-    
-    // $switchColorBtn.click(function() {
-    //     $coloredSquare.css("background-color", getRandomColor());  
-    //     // $coloredSquare.style.backgroundColor = getRandomColor();
-    // });
-
-// });
-
-const MOVIE_API_URL 	= `https://api.themoviedb.org/3/tv/popular?api_key=${MOVIE_API_KEY}&language=fr&page=`;
-// const urlImgPrefix 		= 'https://image.tmdb.org/t/p/w500';
-console.log(MOVIE_API_URL);
 const options = {
 	isClickAnimation: true,
 	isPositionRandom: true,
@@ -43,6 +19,7 @@ const options = {
 
 $(window).bind("load", function() {
     "use strict";
+
 	// jStack
 	const jstack = $("#jstack-image-box").jStack(options);
 	$("#next").click(function() {
@@ -60,11 +37,38 @@ $(window).bind("load", function() {
 		albumLabel: "%1/%2"
 	});
 
-	$("#slick-section").slick({
-		lazyLoad: 'ondemand',
-	});
+	// slick
 
+	const $slickSection = $("#slick-section");
+
+	function initSlickSlider() {
+		$slickSection.slick({
+			lazyLoad: 'ondemand',
+		});
+	}
+
+	function writeHTMLInSlickSlider(arrayOfImages) {
+		
+		let sliderInnerHTML = "";
+		arrayOfImages.forEach(image => {
+			sliderInnerHTML += `<div>
+				<img src="${image}" alt="">
+			</div>`
+		});
+		
+		$slickSection.html(sliderInnerHTML);
+		initSlickSlider();
+	}
+
+	
+
+	function getMovieData() {
+		$.get(MOVIE_API_URL, null, function(data){
+			const movies = data.results;
+			const arrayOfImages = movies.map(movie => urlImgPrefix + movie.poster_path);
+			writeHTMLInSlickSlider(arrayOfImages);
+		});
+	}
+
+	getMovieData();
 });
-
-
-
