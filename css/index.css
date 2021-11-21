@@ -7,30 +7,153 @@ img {
     object-position: center;
 }
 
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
 .colored-square {
     width: 200px;
     height: 200px;
     border: 2px solid;
 }
 
-#jstack-images-ctnr img {
-    height: 200px;
+.card-section {
+    box-shadow: 2px 2px 4px #7d7171;
+    width: 80%; 
+    max-width: 800px;   
+    box-sizing: border-box;
+    margin: 30px auto;
+    position: relative;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+
+.card-section > h2,
+.card-section > p
+{
+    text-align: center;
+}
+
+#jstack-ctnr-section {
+    background-color: #89f193;
+}
+
+#jstack-image-box {
+    position: relative;
+    height: 300px;
+    width: 310px;    
+    margin: 0 auto;
+}
+
+
+#jstack-image-box img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px silver;
+}
+
+#jstack-btns-ctnr {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+#jstack-btns-ctnr  button {
+    border-radius: 4px;
+    height: 38px;
+    margin: 0 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    box-shadow: 1px 1px 4px black;
+    cursor: pointer;
+    padding: 12px 30px;
+}
+
+#lightbox-section {
+    background-color: #de8e8e;
+
 }
 
 #lightbox-gallery-ctnr {
-    margin-top: 240px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #lightbox-gallery-ctnr img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px silver;
 }
 
 #slick-section {
-    margin: 30px auto;
-    width: 80%;
+    background-color: #a2a2e3;
 }
 
-#slick-section img {
+#slick-ctnr {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.slick-movie-item {
     height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+.slick-movie-item > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.slick-movie-item > h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.389);
+    color: white;
+    margin: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 10px;
+}
+
+#tv-shows-slider-pagination ul {
+    display: flex;
+    justify-content: center;
+}
+
+#tv-shows-slider-pagination li {
+    margin: 4px;
+    padding: 4px;
+    border-radius: 4Px;
+
+}
+
+#tv-shows-slider-pagination a {
+    color: white;
+}
+
+#tv-shows-slider-pagination input {
+    display: block; margin: 0 auto;
 }

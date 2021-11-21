@@ -1,83 +1,99 @@
 <!DOCTYPE html>
 
 <html lang='fr'>
-    <head>
-        <title>Template html</title>
-        <meta charset='utf-8' />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-        <meta name="viewport" content="width=device-width, user-scalable=no"/>
-        
-        <!-- Plugin JQuery - LightboxJs -->
-        <link rel="stylesheet" href="lib/jquery/lightbox/lightbox.css">
 
-         <!-- Plugin JQuery - Slick -->
-        <!-- Add the slick-theme.css if you want default styling -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
-        <!-- Add the slick-theme.css if you want default styling -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> 
+<head>
+    <title>Template html</title>
+    <meta charset='utf-8' />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
 
+    <!-- Plugin JQuery - LightboxJs -->
+    <link rel="stylesheet" href="lib/jquery/lightbox/lightbox.css">
 
+    <!-- Plugin JQuery - Slick -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-        
-        <!-- Mon CSS -->
-        <link rel="stylesheet" href="css/index.css">
-    </head>
-	
-    <body>
-        <div id="main">
-            <!-- <button id="switch-color-btn">Click me</button>
+    <!-- Mon CSS -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div id="main">
+        <h1>Intégration de plugins jQuery</h1>
+        <!-- <button id="switch-color-btn">Click me</button>
             <div id="test" class="colored-square"></div> -->
-            <section id="jstack-images-ctnr">
-                <div id="jstack-image-box">  
-                    <a href="#"><img src="https://cdn.pixabay.com/photo/2021/05/09/06/07/dog-6240043_960_720.jpg"></a>  
-                    <a href="#"><img src="https://cdn.pixabay.com/photo/2021/10/26/12/23/cactus-6743531_960_720.jpg"></a>  
-                    <a href="#"><img src="https://cdn.pixabay.com/photo/2020/04/28/12/54/iceland-5104370_960_720.jpg"></a>  
-                </div>
-                <div id="jstack-btns-ctnr">
-                    <button id="prev">Prev</button>
-                    <button id="next">Next</button>
-                    <button id="shuffle">Shuffle</button>
-                </div>
-                
-            </section>
+        <section id="jstack-ctnr-section" class="card-section">
+            <h2>JStack</h2>
+            <p>Pêle-mêle animé</p>
+            <div id="jstack-image-box">
+                <a href="#"><img src="https://cdn.pixabay.com/photo/2021/05/09/06/07/dog-6240043_960_720.jpg"></a>
+                <a href="#"><img src="https://cdn.pixabay.com/photo/2021/10/26/12/23/cactus-6743531_960_720.jpg"></a>
+                <a href="#"><img src="https://cdn.pixabay.com/photo/2020/04/28/12/54/iceland-5104370_960_720.jpg"></a>
+            </div>
+            <div id="jstack-btns-ctnr">
+                <button id="prev">Prev</button>
+                <button id="next">Next</button>
+                <button id="shuffle">Shuffle</button>
+            </div>
 
-            <!-- Inté HTML du plugin LightboxJs -->
-            <section id="lightbox-gallery-ctnr">
-                <a href="https://cdn.pixabay.com/photo/2020/07/01/17/34/wolf-5360340_960_720.jpg" data-lightbox="gallery-1" data-title="Wolf caption">
-                    <img src="https://cdn.pixabay.com/photo/2020/07/01/17/34/wolf-5360340_960_720.jpg" alt="">
-                </a>
+        </section>
 
-                <a href="https://cdn.pixabay.com/photo/2021/09/25/12/52/boho-art-6654957_960_720.jpg" data-lightbox="gallery-1" data-title="Sunset caption"><img src="https://cdn.pixabay.com/photo/2021/09/25/12/52/boho-art-6654957_960_720.jpg" alt=""></a>
-                <a href="https://cdn.pixabay.com/photo/2020/04/06/10/02/clouds-5009055_960_720.jpg" data-lightbox="gallery-1" data-title="Clouds caption"><img src="https://cdn.pixabay.com/photo/2020/04/06/10/02/clouds-5009055_960_720.jpg" alt=""></a>
-
-            </section>
-
-            <section id="slick-section">
-             
-            </section>
-
-        </div>
-
-       
-
-        <!-- JQuery 3.6.0 (slim minified )-->
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script> -->
-        <!---->
-        <script src="lib/jquery/jquery.js"></script>
-        <script src="lib/jquery/jquery.easing.js"></script>
-
-        <!-- Plugins JQuery  -->
-
-        <!-- JStack -->
-        <script src="./lib/jquery/jstack/jstack.js"></script>
-        <!-- LightboxJs -->
-        <script src="./lib/jquery/lightbox/lightbox.js"></script>
-         <!-- Slick -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+        <!-- Inté HTML du plugin LightboxJs -->
         
-        <!--  MY JS -->
-        <script src="private/private.js"></script>
-        <script src="js/index.js"></script>
-    </body>
+            <section id="lightbox-section" class="card-section">
+                <h2>Lightbox</h2>
+                <p>Gallerie d'images</p>
+                <div id="lightbox-gallery-ctnr">
+                    <!-- <a href="https://cdn.pixabay.com/photo/2020/07/01/17/34/wolf-5360340_960_720.jpg"
+                        data-lightbox="gallery-1" data-title="Wolf caption">
+                        <img src="https://cdn.pixabay.com/photo/2020/07/01/17/34/wolf-5360340_960_720.jpg" alt="">
+                    </a>
+                    <a href="https://cdn.pixabay.com/photo/2021/09/25/12/52/boho-art-6654957_960_720.jpg"
+                        data-lightbox="gallery-1" data-title="Sunset caption"><img
+                            src="https://cdn.pixabay.com/photo/2021/09/25/12/52/boho-art-6654957_960_720.jpg" alt=""></a>
+                    <a href="https://cdn.pixabay.com/photo/2020/04/06/10/02/clouds-5009055_960_720.jpg"
+                        data-lightbox="gallery-1" data-title="Clouds caption"><img
+                            src="https://cdn.pixabay.com/photo/2020/04/06/10/02/clouds-5009055_960_720.jpg" alt=""></a> -->
+                </div>    
+            </section>
+       
+        <section id="slick-section" class="card-section">
+            <h2>Slick</h2>
+            <p>Caroussel</p>
+            <div id="slick-ctnr"></div>
+            <div id="tv-shows-slider-pagination"></div>
+        </section>
+      
+    </div>
+
+
+
+    <!-- JQuery 3.6.0 (slim minified )-->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script> -->
+    <!---->
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/jquery/jquery.easing.js"></script>
+
+    <!-- Plugins JQuery  -->
+
+    <!-- JStack -->
+    <script src="./lib/jquery/jstack/jstack.js"></script>
+    <!-- LightboxJs -->
+    <script src="./lib/jquery/lightbox/lightbox.js"></script>
+    <!-- Slick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Pagination -->
+    <script src="lib/jquery/pagination/pagination.min.js"></script>
+
+    <!--  MY JS -->
+    <script src="private/private.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
 </html>
